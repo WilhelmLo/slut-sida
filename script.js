@@ -1,6 +1,10 @@
+let longitude;
+let latitude;
+
+
 document.getElementById('searchForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
-  searchHotels();
+  searchCity();
 });
 
 function searchCity() {
@@ -20,12 +24,14 @@ function searchCity() {
       })
       .then(data => {
       
-          const longitude = data.lon;
-          const latitude = data.lat;
+           longitude = data.lon;
+           latitude = data.lat;
 
           
           console.log("Longitude:", longitude);
           console.log("Latitude:", latitude);
+
+          searchHotels();
       })
       .catch(error => console.error('Error:', error));
 }
@@ -34,7 +40,7 @@ function searchCity() {
 function searchHotels() {
 
   const apiKey = '5ae2e3f221c38a28845f05b6fcc7911a31a1b7f8e1d8197f7fef2f6a';
-  const apiUrl = `https://api.opentripmap.com/0.1/en/places/geoname?name=${destinationCity}&country=${destinationCountry}&kinds=other_hotels&format=json&apikey=${apiKey}`;
+  const apiUrl = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=other_hotels&format=json&apikey=${apiKey}`;
 
   fetch(apiUrl)
       .then(response => {
@@ -68,7 +74,7 @@ function searchHotels() {
               resultDiv.classList.add('result');
               resultDiv.innerHTML = `
                   <h3>${hotelName}</h3>
-                  <p>Hotelets betyg av 5: ${hotelBetyg}</p>
+                  <p>Hotelets populäritet: ${hotelBetyg}</p>
                   <button>Boka nu</button>
               `;
       
