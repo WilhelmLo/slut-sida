@@ -21,11 +21,11 @@ function searchCity() {
             return response.json();
         })
         .then(data => {
-            // Extract longitude and latitude values from the response and assign them to global variables
+            
             longitude = data.lon;
             latitude = data.lat;
             
-            // Call the searchHotels function after fetching latitude and longitude
+            
             searchPlaces();
         })
         .catch(error => console.error('Error:', error));

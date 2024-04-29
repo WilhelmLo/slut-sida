@@ -18,10 +18,6 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-}
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -31,6 +27,11 @@ header h1 {
 header img {
   width: 50px;
   margin-right: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
 }
 
 nav ul {
@@ -47,50 +48,41 @@ nav ul li a {
   text-decoration: none;
 }
 
-.search {
-  background-color: white;
-  padding-bottom: 60px;
-}
-
-.search h2 {
-  margin-top: 16px;
-  margin-bottom: 16px;
+h2 {
+  margin: 16px;
   text-align: center;
 }
 
-.search form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.form {
+  padding: 32px;
+  text-align: center;
 }
 
-.search input[type="text"],
-.search input[type="date"],
-.search button {
-  margin: 8px;
+.form label {
+  display: block;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  margin-bottom: 16px;
   padding: 8px;
   border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.results {
-  padding: 32px;
-  min-height: calc(100vh - 179.06px - 108.79px - 57.59px);
+.form input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 48px;
 }
 
-.result {
-  background-color: #f9f9f9;
-  padding: 16px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.result h3 {
-  margin-bottom: 8px;
-}
-
-.result p {
-  margin-bottom: 8px;
+.form input[type="submit"]:hover {
+  background-color: #555;
 }
 
 footer {
