@@ -101,3 +101,25 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    margin: 15px;
+  }
+
+  .search input[type="text"],
+  .search input[type="date"],
+  .search button {
+    margin: 8px 0;
+    width: calc(100% - 16px);
+  }
+
+  .results {
+    padding: 32px;
+    min-height: calc(100vh - 276.4px - 107.59px - 57.59px);
+  }
+}

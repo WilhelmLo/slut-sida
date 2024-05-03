@@ -93,3 +93,17 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    margin: 15px;
+  }
+
+  .form {
+    min-height: calc(100vh - 107.59px - 70.1px - 57.59px);
+  }
+}
