@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdventureAid</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="icon" href="bilder/logo.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <div class="logo-container">
-        <img src="logo.png" alt="Logo" />
+        <img src="bilder/logo.png" alt="Logo" />
         <h1>AdventureAid</h1>
       </div>
       <nav>
@@ -23,16 +23,16 @@
         </ul>
       </nav>
     </header>
-
-    <section class="search">
-      <h2>Hitta ett boende</h2>
-      <form id="searchForm">
-        <input type="text" id="destinationCity" placeholder="City" />
-        <input type="text" id="destinationCountry" placeholder="Country" />
-        <button type="submit">Sök</button>
-      </form>
-    </section>
-
+    <main>
+      <section class="search">
+        <h2>Hitta ett boende</h2>
+        <form id="searchForm">
+          <input type="text" id="destinationCity" placeholder="City" />
+          <input type="text" id="destinationCountry" placeholder="Country" />
+          <button type="submit">Sök</button>
+        </form>
+      </section>
+    </main>
     <section class="results" id="resultsSection"></section>
 
     <footer>
@@ -41,6 +41,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="javascript/hotel.js"></script>
   </body>
 </html>

@@ -15,7 +15,11 @@ header {
   background-color: #92b6b5;
   color: #fff;
   padding: 16px;
-  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
 }
 
 .logo-container {
@@ -29,13 +33,9 @@ header img {
   margin-right: 10px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
 nav ul {
   list-style: none;
+  text-align: center;
 }
 
 nav ul li {
@@ -53,36 +53,39 @@ h2 {
   text-align: center;
 }
 
-.form {
-  padding: 32px;
-  text-align: center;
+.example-trips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px;
 }
 
-.form label {
-  display: block;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form textarea {
-  margin-bottom: 16px;
-  padding: 8px;
+.trip {
+  margin: 15px;
+  padding: 16px;
   border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 20%;
+  transition: transform 0.3s ease;
+}
+
+.trip img {
   width: 100%;
-  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.form input[type="submit"] {
-  padding: 8px 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 48px;
+.trip:hover {
+  transform: scale(1.1);
 }
 
-.form input[type="submit"]:hover {
-  background-color: #555;
+.trip h3 {
+  margin-top: 8px;
+  font-size: 175%;
+}
+
+.trip p {
+  margin-top: 8px;
+  font-size: 100%;
 }
 
 footer {
@@ -103,7 +106,7 @@ footer {
     margin: 15px;
   }
 
-  .form {
-    min-height: calc(100vh - 107.59px - 70.1px - 57.59px);
+  .trip {
+    width: 45%;
   }
 }

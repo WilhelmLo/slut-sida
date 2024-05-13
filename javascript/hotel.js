@@ -1,19 +1,18 @@
 let longitude;
 let latitude;
 
-
 document.getElementById('searchForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
   searchCity();
 });
 
 function searchCity() {
-  const destinationCity = document.getElementById('destinationCity').value;
-  const destinationCountry = document.getElementById('destinationCountry').value;
+
+    const destinationCity = document.getElementById('destinationCity').value;
+    const destinationCountry = document.getElementById('destinationCountry').value;
 
   const apiKey = '5ae2e3f221c38a28845f05b6fcc7911a31a1b7f8e1d8197f7fef2f6a';
   const apiUrl = `https://api.opentripmap.com/0.1/en/places/geoname?name=${destinationCity}&country=${destinationCountry}&apikey=${apiKey}`;
-
   
   fetch(apiUrl)
       .then(response => {
@@ -39,6 +38,7 @@ function searchCity() {
 
 function searchHotels() {
 
+
   const apiKey = '5ae2e3f221c38a28845f05b6fcc7911a31a1b7f8e1d8197f7fef2f6a';
   const apiUrl = `https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=${longitude}&lat=${latitude}&kinds=other_hotels&format=json&apikey=${apiKey}`;
 
@@ -63,6 +63,10 @@ function searchHotels() {
 
       
       function displayResults(hotels) {
+
+        const destinationCity = document.getElementById('destinationCity').value;
+        const destinationCountry = document.getElementById('destinationCountry').value;
+
           const resultsSection = document.getElementById('resultsSection');
           resultsSection.innerHTML = '';
       
@@ -75,7 +79,7 @@ function searchHotels() {
               resultDiv.innerHTML = `
                   <h3>${hotelName}</h3>
                   <p>Hotelets populäritet: ${hotelBetyg}</p>
-                  <button>Boka nu</button>
+                  <button><a target="_blank" href="https://www.booking.com/city/${destinationCountry}/${destinationCity}">Boka nu</button>
               `;
       
               resultsSection.appendChild(resultDiv);
