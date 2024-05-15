@@ -9,6 +9,7 @@
 body {
   font-family: "Abel", sans-serif;
   line-height: 1.6;
+  background-image: url("bilder/bakgrund.png");
 }
 
 header {
