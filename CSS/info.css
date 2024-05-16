@@ -9,10 +9,6 @@
 body {
   font-family: "Abel", sans-serif;
   line-height: 1.6;
-  background-image: url(../bilder/bakgrund.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 header {
